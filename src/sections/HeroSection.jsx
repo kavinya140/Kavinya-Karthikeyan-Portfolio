@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowDownToLine, ArrowRight, Sparkles } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 
 const roles = ['CSBS Undergraduate', 'Aspiring Java Developer', 'Data Visualization Learner']
@@ -107,6 +107,14 @@ function HeroSection() {
               className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 font-medium transition hover:border-fuchsia-400/40 hover:text-fuchsia-300"
             >
               Contact Me
+            </a>
+            <a
+              href="/Kavinya_Karthikeyan_Resume.pdf"
+              download="Kavinya_Karthikeyan_Resume.pdf"
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-6 py-3 font-medium transition hover:border-cyan-300/40 hover:text-cyan-300"
+            >
+              Download Resume
+              <ArrowDownToLine size={18} />
             </a>
             <a
               href="#journey"

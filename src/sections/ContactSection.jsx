@@ -64,6 +64,15 @@ function ContactSection() {
               </a>
             ))}
           </div>
+
+          <a
+            href="/Kavinya_Karthikeyan_Resume.pdf"
+            download="Kavinya_Karthikeyan_Resume.pdf"
+            className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 font-medium transition hover:border-cyan-300/40 hover:text-cyan-300"
+          >
+            Download Resume
+            <Code2 size={18} />
+          </a>
         </div>
 
         <motion.form
