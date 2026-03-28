@@ -132,33 +132,43 @@ function HeroSection() {
           transition={{ delay: 0.3, duration: 0.85 }}
           className="relative mx-auto flex w-full max-w-md items-center justify-center"
         >
-          <div className="absolute h-64 w-64 rounded-full bg-fuchsia-500/20 blur-3xl" />
-          <div className="absolute h-72 w-72 rounded-full bg-cyan-400/20 blur-3xl" />
-          <div className="gradient-border glass-panel relative w-full rounded-[32px] p-6">
-            <div className="rounded-[28px] border border-white/10 bg-[var(--surface-strong)] p-6">
-              <div className="mb-6 flex items-center gap-3">
-                <span className="h-3 w-3 rounded-full bg-rose-400" />
-                <span className="h-3 w-3 rounded-full bg-amber-400" />
-                <span className="h-3 w-3 rounded-full bg-cyan-400" />
-              </div>
+          <div className="absolute h-72 w-72 rounded-full bg-fuchsia-500/20 blur-3xl" />
+          <div className="absolute h-80 w-80 rounded-full bg-cyan-400/20 blur-3xl" />
+          <div className="gradient-border glass-panel relative w-full rounded-[32px] p-5 sm:p-6">
+            <div className="rounded-[28px] border border-white/10 bg-[var(--surface-strong)] p-5">
+              <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-slate-950/40">
+                <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-4 py-4">
+                  <span className="rounded-full border border-white/10 bg-slate-950/55 px-3 py-1 text-xs uppercase tracking-[0.25em] text-cyan-300 backdrop-blur">
+                    Profile
+                  </span>
+                  <span className="rounded-full border border-white/10 bg-slate-950/55 px-3 py-1 text-xs text-white/80 backdrop-blur">
+                    Open to internships
+                  </span>
+                </div>
 
-              <div className="space-y-4 text-sm text-[var(--text-muted)]">
-                <div className="rounded-2xl bg-white/5 p-4">
-                  <p className="font-medium text-[var(--text)]">Current Focus</p>
-                  <p className="mt-2">
-                    Strengthening fundamentals in software development, data visualization, and web application building
-                    through coursework, internships, and hands-on projects.
+                <img
+                  src="/Kavinya-Karthikeyan-Portfolio/kavinya-portrait.jpeg"
+                  alt="Kavinya Karthikeyan portrait"
+                  className="h-[26rem] w-full object-cover object-center sm:h-[30rem]"
+                />
+
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-transparent p-5">
+                  <p className="font-display text-2xl font-semibold text-white">Kavinya Karthikeyan</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-200">
+                    Computer Science and Business Systems undergraduate focused on learning, building, and growing
+                    through practical software experiences.
                   </p>
                 </div>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl bg-white/5 p-4">
-                    <p className="text-xs uppercase tracking-[0.3em] text-cyan-300">CGPA</p>
-                    <p className="mt-3 font-medium text-[var(--text)]">9.51</p>
-                  </div>
-                  <div className="rounded-2xl bg-white/5 p-4">
-                    <p className="text-xs uppercase tracking-[0.3em] text-fuchsia-300">Location</p>
-                    <p className="mt-3 font-medium text-[var(--text)]">Dindigul, Tamil Nadu</p>
-                  </div>
+              </div>
+
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl bg-white/5 p-4">
+                  <p className="text-xs uppercase tracking-[0.3em] text-cyan-300">CGPA</p>
+                  <p className="mt-3 font-medium text-[var(--text)]">9.51</p>
+                </div>
+                <div className="rounded-2xl bg-white/5 p-4">
+                  <p className="text-xs uppercase tracking-[0.3em] text-fuchsia-300">Location</p>
+                  <p className="mt-3 font-medium text-[var(--text)]">Dindigul, Tamil Nadu</p>
                 </div>
               </div>
             </div>
