@@ -1,4 +1,4 @@
-import { ArrowDownToLine, Code2, Eye, Github, Linkedin, Mail, Phone, Send } from 'lucide-react'
+import { Code2, Eye, Github, Linkedin, Mail, Phone, Send } from 'lucide-react'
 import { motion } from 'framer-motion'
 import AnimatedSection from '../components/AnimatedSection'
 import SectionHeading from '../components/SectionHeading'
@@ -74,14 +74,6 @@ function ContactSection() {
             >
               View Resume
               <Eye size={18} />
-            </a>
-            <a
-              href="/Kavinya-Karthikeyan-Portfolio/Kavinya_Karthikeyan_Resume.pdf"
-              download="Kavinya_Karthikeyan_Resume.pdf"
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 font-medium transition hover:border-cyan-300/40 hover:text-cyan-300"
-            >
-              Download Resume
-              <ArrowDownToLine size={18} />
             </a>
           </div>
         </div>
