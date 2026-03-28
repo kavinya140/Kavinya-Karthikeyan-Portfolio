@@ -1,5 +1,4 @@
-import { Code2, Eye, Github, Linkedin, Mail, Phone, Send } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { Code2, Github, Linkedin, Mail, Phone } from 'lucide-react'
 import AnimatedSection from '../components/AnimatedSection'
 import SectionHeading from '../components/SectionHeading'
 
@@ -22,22 +21,9 @@ const socials = [
 ]
 
 function ContactSection() {
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    const formData = new FormData(event.currentTarget)
-    const name = formData.get('name')
-    const email = formData.get('email')
-    const message = formData.get('message')
-    const subject = encodeURIComponent(`Portfolio enquiry from ${name}`)
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)
-
-    window.location.href = `mailto:kavinyakarthi140@gmail.com?subject=${subject}&body=${body}`
-  }
-
   return (
     <AnimatedSection id="contact" className="section-shell">
-      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="grid gap-8">
         <div>
           <SectionHeading
             eyebrow="Contact"
@@ -64,68 +50,7 @@ function ContactSection() {
               </a>
             ))}
           </div>
-
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href="/Kavinya-Karthikeyan-Portfolio/Kavinya_Karthikeyan_Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 font-medium transition hover:border-cyan-300/40 hover:text-cyan-300"
-            >
-              View Resume
-              <Eye size={18} />
-            </a>
-          </div>
         </div>
-
-        <motion.form
-          onSubmit={handleSubmit}
-          whileHover={{ y: -3 }}
-          className="gradient-border glass-panel rounded-[28px] p-6 sm:p-8"
-        >
-          <div className="grid gap-5">
-            <label className="grid gap-2 text-sm">
-              <span className="text-[var(--text-muted)]">Your Name</span>
-              <input
-                name="name"
-                type="text"
-                placeholder="Enter your name"
-                required
-                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 outline-none transition focus:border-cyan-300/50"
-              />
-            </label>
-
-            <label className="grid gap-2 text-sm">
-              <span className="text-[var(--text-muted)]">Email Address</span>
-              <input
-                name="email"
-                type="email"
-                placeholder="Enter your email"
-                required
-                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 outline-none transition focus:border-cyan-300/50"
-              />
-            </label>
-
-            <label className="grid gap-2 text-sm">
-              <span className="text-[var(--text-muted)]">Message</span>
-              <textarea
-                name="message"
-                rows="5"
-                placeholder="Tell me about your internship, project, or idea"
-                required
-                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 outline-none transition focus:border-cyan-300/50"
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,#8b5cf6_0%,#3b82f6_52%,#22d3ee_100%)] px-6 py-3 font-medium text-white shadow-glow transition hover:scale-[1.02]"
-            >
-              Send Message
-              <Send size={16} />
-            </button>
-          </div>
-        </motion.form>
       </div>
     </AnimatedSection>
   )
